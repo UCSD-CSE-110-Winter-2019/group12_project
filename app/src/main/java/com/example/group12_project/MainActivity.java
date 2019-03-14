@@ -182,7 +182,6 @@ public class MainActivity extends AppCompatActivity
         runner = new BackgroundStepAsyncTask();
         runner.execute(0);
 
-
         /*TESTER BUTTONS*/
         addSteps = findViewById(R.id.add_steps);
         changeTime = findViewById(R.id.change_time);
@@ -193,6 +192,12 @@ public class MainActivity extends AppCompatActivity
                 TextView stepsTv = findViewById(R.id.daily_steps);
                 long steps =  Long.parseLong(stepsTv.getText().toString())+ 500;
                 setStepCount(steps);
+
+                //TODO: Remove - testing notifications
+                NotificationBuilder note = new NotificationBuilder(MainActivity.this, "Added 500 steps", "Steps", 001);
+                note.setUp();
+                note.show();
+
             }
         });
 
