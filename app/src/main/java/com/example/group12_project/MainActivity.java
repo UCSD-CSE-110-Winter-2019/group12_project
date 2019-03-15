@@ -193,11 +193,9 @@ public class MainActivity extends AppCompatActivity
                 long steps =  Long.parseLong(stepsTv.getText().toString())+ 500;
                 setStepCount(steps);
 
-                //TODO: Remove - testing notifications
-                NotificationBuilder note = new NotificationBuilder(MainActivity.this, "Added 500 steps", "Steps", 001);
-                note.setUp();
-                note.show();
-
+                //TODO: Move to chat
+                NotificationBuilder note = new NotificationBuilder(getApplicationContext(), "New message from", "", "01");
+                note.createNotification();
             }
         });
 
@@ -412,9 +410,9 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_friends) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_mainpage) {
 
         } else if (id == R.id.nav_slideshow) {
 

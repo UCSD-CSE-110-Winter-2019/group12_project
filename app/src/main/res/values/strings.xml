@@ -7,4 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="custom">Insert Custom Goal</string>
+    <string name="channel_name">MainChannel</string>
+    <string name="channel_description">App main channel</string>
+    <string name="channel_id">com.example.group12_project</string>
 </resources>
